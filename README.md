@@ -8,7 +8,7 @@
 
 ## English
 
-Wrap Xiaomi 18 Fold screenshots in a realistic device frame, the way Smartisan OS's "带壳截图" did. HyperOS doesn't offer it, so this is a small native Android app that does.
+Put your Xiaomi 18 Fold screenshots inside a realistic device frame, from either the inner or the cover screen, in portrait or landscape, in any of the four colors. HyperOS has nothing built in for this, so this small native Android app does it: pick a screenshot or share one in, adjust the look with a live preview, then save or share it at full resolution.
 
 ### Features
 
@@ -55,7 +55,7 @@ An unofficial fan project, not affiliated with or endorsed by Xiaomi. "Xiaomi" a
 
 ## 中文
 
-给小米 18 Fold 的截图套上逼真的机身外框，就像当年锤子 Smartisan OS 的「带壳截图」。HyperOS 没有这个功能，于是做了这个原生安卓应用。
+给小米 18 Fold 的截图套上逼真的机身外框：内屏、外屏，横屏、竖屏，四种机身配色都支持。HyperOS 没有自带这个功能，这个轻巧的原生安卓应用来补上：选一张截图或从相册分享过来，实时预览、调好效果，再按原图分辨率保存或分享。
 
 ### 功能
 
