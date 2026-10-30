@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Short screens (folded cover screen): the same controls and ids as
+  options_panel, but one option row at a time behind tabs.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/option_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/tab_finish"
+            style="@style/Tab"
+            android:text="@string/opt_color" />
+
+        <RadioButton
+            android:id="@+id/tab_background"
+            style="@style/Tab"
+            android:text="@string/opt_background" />
+
+        <RadioButton
+            android:id="@+id/tab_padding"
+            style="@style/Tab"
+            android:text="@string/opt_margin" />
+
+        <RadioButton
+            android:id="@+id/tab_radius"
+            style="@style/Tab"
+            android:text="@string/opt_corners" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <LinearLayout
+            android:id="@+id/page_finish"
+            style="@style/OptionPage">
+
+            <!-- One chip per Finish, filled in by MainActivity; scrolls if a language runs long. -->
+            <HorizontalScrollView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scrollbars="none">
+
+                <RadioGroup
+                    android:id="@+id/finish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/page_background"
+            style="@style/OptionPage">
+
+            <!-- Scrolls instead of wrapping when a language runs long. -->
+            <HorizontalScrollView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scrollbars="none">
+
+                <RadioGroup
+                    android:id="@+id/background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bg_light"
+                        style="@style/Choice"
+                        android:text="@string/bg_light" />
+
+                    <RadioButton
+                        android:id="@+id/bg_dark"
+                        style="@style/Choice"
+                        android:text="@string/bg_dark" />
+
+                    <RadioButton
+                        android:id="@+id/bg_transparent"
+                        style="@style/Choice"
+                        android:text="@string/bg_transparent" />
+                </RadioGroup>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/page_padding"
+            style="@style/OptionPage">
+
+            <!-- Scrolls instead of wrapping when a language runs long. -->
+            <HorizontalScrollView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scrollbars="none">
+
+                <RadioGroup
+                    android:id="@+id/padding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/pad_none"
+                        style="@style/Choice"
+                        android:text="@string/pad_none" />
+
+                    <RadioButton
+                        android:id="@+id/pad_tight"
+                        style="@style/Choice"
+                        android:text="@string/pad_tight" />
+
+                    <RadioButton
+                        android:id="@+id/pad_normal"
+                        style="@style/Choice"
+                        android:text="@string/pad_normal" />
+
+                    <RadioButton
+                        android:id="@+id/pad_loose"
+                        style="@style/Choice"
+                        android:text="@string/pad_loose" />
+                </RadioGroup>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/page_radius"
+            style="@style/OptionPage">
+
+            <SeekBar
+                android:id="@+id/radius"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="16"
+                android:progressTint="@color/accent"
+                android:thumbTint="@color/accent" />
+
+            <TextView
+                android:id="@+id/radius_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:maxLines="1"
+                android:minWidth="44dp"
+                android:textColor="@color/muted"
+                android:textSize="13sp" />
+
+            <Switch
+                android:id="@+id/shadow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:maxLines="1"
+                android:text="@string/shadow"
+                android:textColor="@color/text" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/reset"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="0dp"
+            android:paddingHorizontal="8dp"
+            android:text="@string/reset"
+            android:textColor="@color/accent" />
+
+        <Button
+            android:id="@+id/share"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:text="@string/share" />
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1.6"
+            android:backgroundTint="@color/accent"
+            android:maxLines="1"
+            android:text="@string/save"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</LinearLayout>

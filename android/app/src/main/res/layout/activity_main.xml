@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Short portrait (folded cover screen): preview takes the room, options sit
+  behind tabs so only one row shows at a time.
+  Tall portrait → layout-h720dp, landscape → layout-land.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_bar" />
+
+    <include
+        layout="@layout/stage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/panel"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="12dp"
+        android:paddingBottom="4dp">
+
+        <include layout="@layout/options_panel_compact" />
+    </LinearLayout>
+</LinearLayout>

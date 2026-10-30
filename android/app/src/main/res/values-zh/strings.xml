@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">带壳截图</string>
+    <string name="title">18 Fold 带壳截图</string>
+    <string name="tile_label">带壳</string>
+    <string name="tile_subtitle">最近一张截图</string>
+    <string name="album_dir">带壳截图</string>
+
+    <string name="settings">设置</string>
+    <string name="pick">选择截图</string>
+    <string name="pick_short">选择截图</string>
+    <string name="empty_hint">选择一张截图\n或在相册里分享到\n「带壳截图」</string>
+    <string name="preview_description">带壳效果预览</string>
+    <string name="rotate">旋转 180°</string>
+    <string name="remove">移除</string>
+    <string name="screen_inner">内屏</string>
+    <string name="screen_outer">外屏</string>
+    <string name="choose_screen">选择屏幕</string>
+    <string name="unrecognized">无法识别 %1$s\n不是 18 Fold 截图？点「选择屏幕」手动指定</string>
+    <string name="thumb_description">第 %1$d 张</string>
+
+    <string name="opt_color">颜色</string>
+    <string name="opt_background">背景</string>
+    <string name="opt_margin">边距</string>
+    <string name="opt_corners">圆角</string>
+    <string name="bg_light">浅灰</string>
+    <string name="bg_dark">深色</string>
+    <string name="bg_transparent">透明</string>
+    <string name="pad_none">无</string>
+    <string name="pad_tight">紧凑</string>
+    <string name="pad_normal">适中</string>
+    <string name="pad_loose">宽松</string>
+    <string name="shadow">投影</string>
+    <string name="finish_black">黑</string>
+    <string name="finish_white">白</string>
+    <string name="finish_pink">粉</string>
+    <string name="finish_red">红</string>
+    <string name="reset">重置</string>
+    <string name="reset_done">已恢复默认效果</string>
+
+    <string name="share">分享</string>
+    <string name="save">保存到相册</string>
+    <plurals name="save_n">
+        <item quantity="other">保存 %d 张</item>
+    </plurals>
+    <string name="processing">处理中 %1$d/%2$d…</string>
+    <string name="share_title">分享带壳截图</string>
+    <plurals name="saved_n">
+        <item quantity="other">已保存 %1$d 张到 相册 › %2$s</item>
+    </plurals>
+    <string name="error">出错：%1$s</string>
+    <string name="open_failed">无法打开图片：%1$s</string>
+    <string name="gallery_write_failed">无法写入相册</string>
+
+    <string name="need_photos_to_trash">需要照片权限才能删除原始截图</string>
+    <string name="originals_not_found">没在相册里找到对应的原始截图，未删除</string>
+    <string name="trash_cancelled">已取消，原始截图保留</string>
+    <plurals name="trashed_n">
+        <item quantity="other">已把 %d 张原始截图移到回收站</item>
+    </plurals>
+
+    <string name="entries_title">快捷入口</string>
+    <string name="done">完成</string>
+    <string name="watch_label">截图后弹出「加壳」提醒</string>
+    <string name="add_tile">添加「带壳」快捷开关</string>
+    <string name="section_originals">原始截图</string>
+    <string name="trash_after_share">分享后移到回收站</string>
+    <string name="trash_after_save">保存到相册后移到回收站</string>
+    <string name="manage_media_on">已开启：删除时免确认</string>
+    <string name="manage_media_off">删除时免确认（开启媒体管理权限）</string>
+    <string name="entries_help">· 移到回收站的截图 30 天内可恢复；分享用的临时文件分享完会自动清理\n· 快捷开关：打开最近一张截图\n· 分享菜单：相册里选图 → 分享 → 带壳截图\n· 调好效果后点「保存到相册」，保存在 相册 › 带壳截图\n· 如果截图提醒不出现：设置 › 应用 › 带壳截图，允许自启动、省电策略选「无限制」</string>
+    <string name="need_photos_to_read">需要「照片和视频 › 始终允许所有」权限才能读取新截图</string>
+    <string name="tile_added">已添加到快捷开关</string>
+    <string name="tile_exists">快捷开关已存在</string>
+    <string name="tile_not_added">未添加</string>
+    <string name="tile_unsupported">系统不支持一键添加，请在控制中心编辑里手动添加「带壳」</string>
+
+    <string name="channel_prompt">截图后提醒加壳</string>
+    <string name="channel_prompt_description">截屏后弹出「加壳」按钮</string>
+    <string name="prompt_title">新截图</string>
+    <string name="prompt_text">点按「加壳」预览带壳效果</string>
+    <string name="prompt_action">加壳</string>
+</resources>

@@ -1,0 +1,7 @@
+node_modules
+dist
+# Local test images (real screenshots, reference renders): never published.
+samples/
+.DS_Store
+.claude/
+*.apk

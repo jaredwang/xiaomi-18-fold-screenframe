@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Default (English). Chinese lives in values-zh; the system language picks one. -->
+<resources>
+    <string name="app_name">Screen Frame</string>
+    <string name="title">Screen Frame</string>
+    <string name="tile_label">Frame</string>
+    <string name="tile_subtitle">Latest screenshot</string>
+    <!-- Folder under Pictures/ that saved images go to. -->
+    <string name="album_dir">ScreenFrame</string>
+
+    <!-- Top bar & stage -->
+    <string name="settings">Settings</string>
+    <string name="pick">Pick screenshot</string>
+    <!-- Top-bar version; the bar is tight on the folded screen. -->
+    <string name="pick_short">Pick</string>
+    <string name="empty_hint">Pick a screenshot\nor share one here\nfrom the gallery</string>
+    <string name="preview_description">Framed preview</string>
+    <string name="rotate">Rotate 180°</string>
+    <string name="remove">Remove</string>
+    <string name="screen_inner">Inner</string>
+    <string name="screen_outer">Cover</string>
+    <string name="choose_screen">Pick screen</string>
+    <string name="unrecognized">Unrecognised size %1$s\nNot an 18 Fold screenshot? Tap “Pick screen” to choose one.</string>
+    <string name="thumb_description">Image %1$d</string>
+
+    <!-- Options -->
+    <string name="opt_color">Color</string>
+    <string name="opt_background">Background</string>
+    <string name="opt_margin">Margin</string>
+    <string name="opt_corners">Corners</string>
+    <string name="bg_light">Light</string>
+    <string name="bg_dark">Dark</string>
+    <string name="bg_transparent">Clear</string>
+    <string name="pad_none">None</string>
+    <string name="pad_tight">Tight</string>
+    <string name="pad_normal">Medium</string>
+    <string name="pad_loose">Wide</string>
+    <string name="shadow">Shadow</string>
+    <string name="finish_black">Black</string>
+    <string name="finish_white">White</string>
+    <string name="finish_pink">Pink</string>
+    <string name="finish_red">Red</string>
+    <string name="reset">Reset</string>
+    <string name="reset_done">Back to the default look</string>
+
+    <!-- Save & share -->
+    <string name="share">Share</string>
+    <string name="save">Save</string>
+    <plurals name="save_n">
+        <item quantity="one">Save %d</item>
+        <item quantity="other">Save %d</item>
+    </plurals>
+    <string name="processing">Working %1$d/%2$d…</string>
+    <string name="share_title">Share framed screenshot</string>
+    <plurals name="saved_n">
+        <item quantity="one">Saved %1$d image to Gallery › %2$s</item>
+        <item quantity="other">Saved %1$d images to Gallery › %2$s</item>
+    </plurals>
+    <string name="error">Error: %1$s</string>
+    <string name="open_failed">Couldn\'t open image: %1$s</string>
+    <string name="gallery_write_failed">Couldn\'t write to the gallery</string>
+
+    <!-- Moving originals to the trash -->
+    <string name="need_photos_to_trash">Photo access is needed to remove the original screenshots</string>
+    <string name="originals_not_found">Couldn\'t find the original screenshots in the gallery, nothing removed</string>
+    <string name="trash_cancelled">Cancelled, original screenshots kept</string>
+    <plurals name="trashed_n">
+        <item quantity="one">Moved %d original screenshot to the trash</item>
+        <item quantity="other">Moved %d original screenshots to the trash</item>
+    </plurals>
+
+    <!-- Settings dialog -->
+    <string name="entries_title">Shortcuts</string>
+    <string name="done">Done</string>
+    <string name="watch_label">Prompt after each screenshot</string>
+    <string name="add_tile">Add Quick Settings tile</string>
+    <string name="section_originals">Original screenshots</string>
+    <string name="trash_after_share">Move to trash after sharing</string>
+    <string name="trash_after_save">Move to trash after saving</string>
+    <string name="manage_media_on">On: no confirmation when removing</string>
+    <string name="manage_media_off">Remove without confirmation (media management)</string>
+    <string name="entries_help">· Trashed screenshots can be restored for 30 days; temporary share files are cleaned up automatically\n· Quick Settings tile: opens your latest screenshot\n· Share menu: pick an image in the gallery → Share → Screen Frame\n· When it looks right, tap Save; images go to Gallery › ScreenFrame\n· No screenshot prompt? Settings › Apps › Screen Frame: allow autostart and set battery saver to No restrictions</string>
+    <string name="need_photos_to_read">Allow “Photos and videos › Always allow all” to read new screenshots</string>
+    <string name="tile_added">Added to Quick Settings</string>
+    <string name="tile_exists">The tile is already there</string>
+    <string name="tile_not_added">Not added</string>
+    <string name="tile_unsupported">Can\'t add it automatically; edit Quick Settings and add “Frame” by hand</string>
+
+    <!-- Screenshot prompt -->
+    <string name="channel_prompt">Prompt after screenshots</string>
+    <string name="channel_prompt_description">Shows a “Frame it” button after each screenshot</string>
+    <string name="prompt_title">New screenshot</string>
+    <string name="prompt_text">Tap “Frame it” to preview it in the frame</string>
+    <string name="prompt_action">Frame it</string>
+</resources>
