@@ -1,4 +1,4 @@
-package com.fold18.frame
+package com.veltrix.fold.frame
 
 import android.Manifest
 import android.app.job.JobInfo

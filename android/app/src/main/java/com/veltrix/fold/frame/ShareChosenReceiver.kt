@@ -1,4 +1,4 @@
-package com.fold18.frame
+package com.veltrix.fold.frame
 
 import android.app.PendingIntent
 import android.content.BroadcastReceiver

@@ -1,4 +1,4 @@
-package com.fold18.frame
+package com.veltrix.fold.frame
 
 import android.graphics.Bitmap
 import android.graphics.BitmapShader
@@ -12,14 +12,14 @@ import android.graphics.RadialGradient
 import android.graphics.RectF
 import android.graphics.Shader
 import android.graphics.SweepGradient
-import com.fold18.frame.core.DeviceProfile
-import com.fold18.frame.core.Edge
-import com.fold18.frame.core.EdgePart
-import com.fold18.frame.core.Layout
-import com.fold18.frame.core.Spine
-import com.fold18.frame.core.computeLayout
-import com.fold18.frame.core.screenCornersOnCanvas
-import com.fold18.frame.core.toCanvas
+import com.veltrix.fold.frame.core.DeviceProfile
+import com.veltrix.fold.frame.core.Edge
+import com.veltrix.fold.frame.core.EdgePart
+import com.veltrix.fold.frame.core.Layout
+import com.veltrix.fold.frame.core.Spine
+import com.veltrix.fold.frame.core.computeLayout
+import com.veltrix.fold.frame.core.screenCornersOnCanvas
+import com.veltrix.fold.frame.core.toCanvas
 import kotlin.math.max
 import kotlin.math.min
 

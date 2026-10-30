@@ -1,18 +1,50 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
 }
 
+/**
+ * Release signing key. CI (the "Release APK" workflow) passes it through
+ * SIGNING_* environment variables; locally, the properties file written by
+ * scripts/setup-release-signing.sh is used if present. Without either,
+ * release builds fall back to the debug key.
+ */
+val releaseSigning: Map<String, String>? = System.getenv("SIGNING_KEYSTORE_PATH")?.let { path ->
+    mapOf(
+        "storeFile" to path,
+        "storePassword" to System.getenv("SIGNING_STORE_PASSWORD").orEmpty(),
+        "keyAlias" to System.getenv("SIGNING_KEY_ALIAS").orEmpty(),
+        "keyPassword" to System.getenv("SIGNING_KEY_PASSWORD").orEmpty(),
+    )
+} ?: File(System.getProperty("user.home"), ".android/fold18-screenframe-release.properties")
+    .takeIf { it.isFile }
+    ?.let { file -> Properties().apply { file.inputStream().use(::load) } }
+    ?.let { props -> props.stringPropertyNames().associateWith { props.getProperty(it) } }
+
 android {
-    namespace = "com.fold18.frame"
+    namespace = "com.veltrix.fold.frame"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.fold18.frame"
+        applicationId = "com.veltrix.fold.frame"
         minSdk = 33
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
+        // CI sets these from the release tag and the workflow run number.
+        versionCode = System.getenv("VERSION_CODE")?.toInt() ?: 1
+        versionName = System.getenv("VERSION_NAME") ?: "1.0"
+    }
+
+    signingConfigs {
+        releaseSigning?.let { s ->
+            create("release") {
+                storeFile = file(s.getValue("storeFile"))
+                storePassword = s.getValue("storePassword")
+                keyAlias = s.getValue("keyAlias")
+                keyPassword = s.getValue("keyPassword")
+            }
+        }
     }
 
     buildTypes {
@@ -20,8 +52,7 @@ android {
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"))
-            // Personal side-load build: sign with the local debug key.
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.findByName("release") ?: signingConfigs.getByName("debug")
         }
     }
 

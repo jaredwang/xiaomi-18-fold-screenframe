@@ -59,7 +59,7 @@
 
         <provider
             android:name=".ShareProvider"
-            android:authorities="com.fold18.frame.share"
+            android:authorities="com.veltrix.fold.frame.share"
             android:exported="false"
             android:grantUriPermissions="true" />
 

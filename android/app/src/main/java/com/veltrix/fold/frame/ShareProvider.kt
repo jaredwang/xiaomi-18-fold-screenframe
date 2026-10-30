@@ -1,4 +1,4 @@
-package com.fold18.frame
+package com.veltrix.fold.frame
 
 import android.content.ContentProvider
 import android.content.ContentValues
@@ -43,7 +43,7 @@ class ShareProvider : ContentProvider() {
         throw UnsupportedOperationException()
 
     companion object {
-        private const val AUTHORITY = "com.fold18.frame.share"
+        private const val AUTHORITY = "com.veltrix.fold.frame.share"
 
         fun dir(context: Context) = File(context.cacheDir, "share").apply { mkdirs() }
 

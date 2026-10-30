@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Short screens (folded cover screen): the same controls and ids as
-  options_panel, but one option row at a time behind tabs.
+  Folded cover screen: the same controls and ids as options_panel, but one
+  option row at a time behind tabs.
 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -168,40 +168,4 @@
         </LinearLayout>
     </FrameLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/reset"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minWidth="0dp"
-            android:paddingHorizontal="8dp"
-            android:text="@string/reset"
-            android:textColor="@color/accent" />
-
-        <Button
-            android:id="@+id/share"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:maxLines="1"
-            android:text="@string/share" />
-
-        <Button
-            android:id="@+id/save"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_weight="1.6"
-            android:backgroundTint="@color/accent"
-            android:maxLines="1"
-            android:text="@string/save"
-            android:textColor="#FFFFFF" />
-    </LinearLayout>
 </LinearLayout>

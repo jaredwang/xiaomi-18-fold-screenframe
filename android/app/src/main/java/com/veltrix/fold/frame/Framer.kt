@@ -1,4 +1,4 @@
-package com.fold18.frame
+package com.veltrix.fold.frame
 
 import android.content.ContentResolver
 import android.content.ContentUris
@@ -10,14 +10,14 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.provider.OpenableColumns
-import com.fold18.frame.core.DeviceProfile
-import com.fold18.frame.core.Profiles
-import com.fold18.frame.core.SAMPLE_WIDTH
-import com.fold18.frame.core.cameraAtBottom
-import com.fold18.frame.core.detectProfile
-import com.fold18.frame.core.detectRotation
-import com.fold18.frame.core.statusBand
-import com.fold18.frame.core.statusBarMargins
+import com.veltrix.fold.frame.core.DeviceProfile
+import com.veltrix.fold.frame.core.Profiles
+import com.veltrix.fold.frame.core.SAMPLE_WIDTH
+import com.veltrix.fold.frame.core.cameraAtBottom
+import com.veltrix.fold.frame.core.detectProfile
+import com.veltrix.fold.frame.core.detectRotation
+import com.veltrix.fold.frame.core.statusBand
+import com.veltrix.fold.frame.core.statusBarMargins
 import java.io.File
 import kotlin.math.max
 import kotlin.math.roundToInt

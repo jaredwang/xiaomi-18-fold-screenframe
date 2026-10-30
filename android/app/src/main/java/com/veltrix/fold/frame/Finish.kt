@@ -1,4 +1,4 @@
-package com.fold18.frame
+package com.veltrix.fold.frame
 
 /**
  * Frame colours of the four 18 Fold models, sampled from the official product

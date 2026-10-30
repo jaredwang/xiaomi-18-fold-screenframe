@@ -1,4 +1,4 @@
-package com.fold18.frame.core
+package com.veltrix.fold.frame.core
 
 import kotlin.math.abs
 import kotlin.math.ceil

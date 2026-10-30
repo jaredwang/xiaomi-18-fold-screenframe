@@ -24,5 +24,7 @@
         android:paddingVertical="8dp">
 
         <include layout="@layout/options_panel" />
+
+        <include layout="@layout/actions_bar" />
     </LinearLayout>
 </LinearLayout>

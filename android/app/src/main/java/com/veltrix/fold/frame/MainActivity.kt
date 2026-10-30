@@ -1,4 +1,4 @@
-package com.fold18.frame
+package com.veltrix.fold.frame
 
 import android.Manifest
 import android.app.Activity
@@ -35,8 +35,8 @@ import android.widget.SeekBar
 import android.widget.Switch
 import android.widget.TextView
 import android.widget.Toast
-import com.fold18.frame.core.DeviceProfile
-import com.fold18.frame.core.Profiles
+import com.veltrix.fold.frame.core.DeviceProfile
+import com.veltrix.fold.frame.core.Profiles
 import java.util.concurrent.Executors
 import kotlin.concurrent.thread
 import kotlin.math.abs
@@ -695,7 +695,7 @@ class MainActivity : Activity() {
         /** Big enough to stay sharp on the unfolded inner screen. */
         private const val PREVIEW_LONG_SIDE = 1600
         private const val THUMB_LONG_SIDE = 240
-        private const val ACTION_OPEN = "com.fold18.frame.OPEN"
+        private const val ACTION_OPEN = "com.veltrix.fold.frame.OPEN"
         private const val FINISH_ID_BASE = 0x1800
 
         /** Open the editor on one image (tile, screenshot prompt). */

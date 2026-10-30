@@ -81,6 +81,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minWidth="0dp"
+                android:paddingHorizontal="8dp"
                 android:text="@string/rotate"
                 android:textColor="@color/text" />
 
@@ -90,6 +91,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minWidth="0dp"
+                android:paddingHorizontal="8dp"
                 android:textColor="@color/text" />
 
             <TextView
@@ -107,6 +109,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minWidth="0dp"
+                android:paddingHorizontal="8dp"
                 android:text="@string/remove"
                 android:textColor="@color/muted" />
         </LinearLayout>

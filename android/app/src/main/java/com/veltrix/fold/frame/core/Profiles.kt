@@ -1,4 +1,4 @@
-package com.fold18.frame.core
+package com.veltrix.fold.frame.core
 
 // Device geometry in "design units" = the panel's native pixels, always
 // described in the device's natural portrait orientation (camera at the

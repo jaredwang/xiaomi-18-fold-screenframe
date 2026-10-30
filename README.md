@@ -23,9 +23,13 @@ Put your Xiaomi 18 Fold screenshots inside a realistic device frame, from either
 - **Adapts to the foldable.** The cover screen gets a compact tabbed panel. The inner screen gets the full panel in portrait and a side-by-side layout in landscape. Folding or rotating keeps your work.
 - **English and Chinese**, following the system language. It can also be set per app under *Settings › Apps › Language*.
 
-### Install (Android app)
+### Download
 
-Requirements: Android 13+ (built for the Xiaomi 18 Fold; other phones work but the frame is the 18 Fold's), JDK 17 and the Android SDK (platform 35).
+Get the latest `ScreenFrame-x.y.z.apk` from [Releases](https://github.com/jaredwang/xiaomi-18-fold-screenframe/releases/latest) and open it on your phone to install. Requires Android 13+. It is built for the Xiaomi 18 Fold; it installs on other phones, but the frame drawn is the 18 Fold's.
+
+### Build from source
+
+Requirements: JDK 17 and the Android SDK (platform 35).
 
 ```bash
 cd android
@@ -33,12 +37,20 @@ cd android
 adb install -r app/build/outputs/apk/debug/app-debug.apk
 ```
 
-`./gradlew assembleRelease` builds a minified APK signed with your local debug key, for side-loading.
+### Publishing a release
+
+Pushing a version tag makes GitHub Actions test, build, sign and publish the APK:
+
+```bash
+git tag v1.0.1 && git push origin v1.0.1
+```
+
+The workflow signs with a key kept in the repository's Actions secrets. Run `android/scripts/setup-release-signing.sh` once to create the key and upload it.
 
 ### Project layout
 
 ```
-android/app/src/main/java/com/fold18/frame/
+android/app/src/main/java/com/veltrix/fold/frame/
   core/          Profiles, geometry, status-bar orientation (pure Kotlin, unit-tested)
   FrameRenderer  Canvas drawing of the frame
   Finish         The four colour finishes
@@ -70,9 +82,13 @@ An unofficial fan project, not affiliated with or endorsed by Xiaomi. "Xiaomi" a
 - **适配折叠屏**：外屏用紧凑的标签页面板；内屏竖向是完整面板，横向是左右分栏。折叠、展开、旋转时已有的编辑都会保留。
 - **中英文界面**：跟随系统语言，也可以在「设置 › 应用 › 语言」里单独设置。
 
-### 安装（安卓应用）
+### 下载
 
-环境：Android 13 及以上（为小米 18 Fold 设计，其他手机也能装，但画的是 18 Fold 的外壳）、JDK 17、Android SDK（platform 35）。
+到 [Releases](https://github.com/jaredwang/xiaomi-18-fold-screenframe/releases/latest) 下载最新的 `ScreenFrame-x.y.z.apk`，在手机上打开即可安装。需要 Android 13 及以上。应用是为小米 18 Fold 设计的，其他手机也能装，但画出来的是 18 Fold 的外壳。
+
+### 从源码编译
+
+环境：JDK 17、Android SDK（platform 35）。
 
 ```bash
 cd android
@@ -80,12 +96,20 @@ cd android
 adb install -r app/build/outputs/apk/debug/app-debug.apk
 ```
 
-`./gradlew assembleRelease` 会生成经过压缩、用本机调试证书签名的 APK，用于自行安装。
+### 发布新版本
+
+推送一个版本标签，GitHub Actions 就会自动测试、编译、签名并发布 APK：
+
+```bash
+git tag v1.0.1 && git push origin v1.0.1
+```
+
+签名密钥保存在仓库的 Actions Secrets 里。第一次发布前，运行一次 `android/scripts/setup-release-signing.sh` 来生成并上传密钥。
 
 ### 目录结构
 
 ```
-android/app/src/main/java/com/fold18/frame/
+android/app/src/main/java/com/veltrix/fold/frame/
   core/          机型参数、几何计算、状态栏方向识别（纯 Kotlin，有单元测试）
   FrameRenderer  用 Canvas 绘制外壳
   Finish         四种机身配色

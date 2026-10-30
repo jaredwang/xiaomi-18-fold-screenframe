@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Wide enough for the 边距 row (label + four choices) on the 622dp-wide folded screen in landscape. -->
-    <dimen name="side_panel_width">360dp</dimen>
+    <!-- Options column in landscape: tabbed panel on the folded screen (622dp wide). -->
+    <dimen name="side_panel_width">300dp</dimen>
 </resources>

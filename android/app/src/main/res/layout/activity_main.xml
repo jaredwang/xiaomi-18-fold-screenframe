@@ -27,6 +27,8 @@
         android:paddingHorizontal="12dp"
         android:paddingBottom="4dp">
 
-        <include layout="@layout/options_panel_compact" />
+        <include layout="@layout/options_tabs" />
+
+        <include layout="@layout/actions_bar" />
     </LinearLayout>
 </LinearLayout>
