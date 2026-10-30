@@ -5,8 +5,6 @@ import kotlin.math.max
 import kotlin.math.min
 import kotlin.math.roundToInt
 
-// Mirrors src/frame/geometry.ts in the web version.
-
 // Inner (1.414) and cover (1.466) ratios are only ~3.7% apart.
 private const val ASPECT_TOLERANCE = 0.015f
 

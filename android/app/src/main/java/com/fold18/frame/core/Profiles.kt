@@ -5,7 +5,7 @@ package com.fold18.frame.core
 // top-left for the inner screen). Every value scales with the screenshot's
 // short side. Screen sizes, corner radii and cutouts come from the device
 // (`dumpsys display` / `dumpsys window`); bezel and rim were measured from
-// reference renders. Mirrors src/frame/profiles.ts in the web version.
+// reference renders.
 
 enum class Edge { TOP, RIGHT, BOTTOM, LEFT }
 

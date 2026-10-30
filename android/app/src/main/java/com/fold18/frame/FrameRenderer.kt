@@ -32,7 +32,7 @@ data class FrameOptions(
     val finish: Finish,
 )
 
-/** Android Canvas port of src/frame/render.ts — same layers, same numbers. */
+/** Draws the device frame around a screenshot on an Android Canvas. */
 object FrameRenderer {
     /** Body corners (topLeft, topRight, bottomRight, bottomLeft indices) touching each edge. */
     private val SPINE_CORNERS = mapOf(

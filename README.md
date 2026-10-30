@@ -8,7 +8,7 @@
 
 ## English
 
-Wrap Xiaomi 18 Fold screenshots in a realistic device frame, the way Smartisan OS's "带壳截图" did. HyperOS doesn't offer it, so this is a small native Android app (plus a web version) that does.
+Wrap Xiaomi 18 Fold screenshots in a realistic device frame, the way Smartisan OS's "带壳截图" did. HyperOS doesn't offer it, so this is a small native Android app that does.
 
 ### Features
 
@@ -35,19 +35,6 @@ adb install -r app/build/outputs/apk/debug/app-debug.apk
 
 `./gradlew assembleRelease` builds a minified APK signed with your local debug key, for side-loading.
 
-### Web version
-
-A browser/PWA version with the same frame geometry (black finish, Chinese UI):
-
-```bash
-npm install
-npm run dev        # http://localhost:5173
-npm test           # geometry & orientation unit tests
-npm run templates  # export blank frames to public/templates/
-```
-
-The blank frames in `public/templates/` are transparent PNGs at native resolution: folded, unfolded portrait and unfolded landscape. You can use them in any image editor.
-
 ### Project layout
 
 ```
@@ -57,7 +44,7 @@ android/app/src/main/java/com/fold18/frame/
   Finish         The four colour finishes
   MainActivity   Editor: preview, options, save/share, settings
   …              Share target, Quick Settings tile, screenshot watcher, cleanup jobs
-src/frame/       Web version of the same geometry and renderer
+android/app/src/test/   Unit tests: ./gradlew testDebugUnitTest
 ```
 
 ### Disclaimer
@@ -68,7 +55,7 @@ An unofficial fan project, not affiliated with or endorsed by Xiaomi. "Xiaomi" a
 
 ## 中文
 
-给小米 18 Fold 的截图套上逼真的机身外框，就像当年锤子 Smartisan OS 的「带壳截图」。HyperOS 没有这个功能，于是做了这个原生安卓应用（另附网页版）。
+给小米 18 Fold 的截图套上逼真的机身外框，就像当年锤子 Smartisan OS 的「带壳截图」。HyperOS 没有这个功能，于是做了这个原生安卓应用。
 
 ### 功能
 
@@ -95,19 +82,6 @@ adb install -r app/build/outputs/apk/debug/app-debug.apk
 
 `./gradlew assembleRelease` 会生成经过压缩、用本机调试证书签名的 APK，用于自行安装。
 
-### 网页版
-
-几何参数完全一样的浏览器 / PWA 版本（只有黑色外壳，界面为中文）：
-
-```bash
-npm install
-npm run dev        # http://localhost:5173
-npm test           # 几何与方向识别单元测试
-npm run templates  # 导出空白外壳到 public/templates/
-```
-
-`public/templates/` 里是三张原生分辨率的透明 PNG 空白外壳：折叠、展开竖屏、展开横屏，可以直接拿到修图软件里用。
-
 ### 目录结构
 
 ```
@@ -117,7 +91,7 @@ android/app/src/main/java/com/fold18/frame/
   Finish         四种机身配色
   MainActivity   编辑器：预览、选项、保存 / 分享、设置
   …              分享入口、快捷开关、截图监听、清理任务
-src/frame/       网页版的几何计算与绘制
+android/app/src/test/   单元测试：./gradlew testDebugUnitTest
 ```
 
 ### 声明

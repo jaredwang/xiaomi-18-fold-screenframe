@@ -9,7 +9,6 @@ import kotlin.math.max
 // status bar does: Android pads the status bar on the side of the punch-hole.
 // Inner screen, camera at the top-left (portrait) or top-right (landscape)
 // → that margin is wider. Camera at the bottom → both margins match.
-// Mirrors src/frame/orientation.ts in the web version.
 
 data class Margins(val left: Float, val right: Float)
 

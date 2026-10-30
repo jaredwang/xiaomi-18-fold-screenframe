@@ -5,7 +5,6 @@ import org.junit.Assert.assertNull
 import org.junit.Assert.assertSame
 import org.junit.Test
 
-// Same cases as tests/*.test.ts in the web version.
 class CoreTest {
     @Test
     fun detectsScreens() {
