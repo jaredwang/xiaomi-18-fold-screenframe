@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Labels in the first column line up; long values (the repo link) wrap in the second. -->
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="24dp"
+    android:paddingTop="8dp"
+    android:shrinkColumns="1">
+
+    <TableRow android:paddingVertical="6dp">
+        <TextView
+            style="@style/AboutLabel"
+            android:text="@string/about_version" />
+
+        <TextView
+            android:id="@+id/about_version"
+            style="@style/AboutValue" />
+    </TableRow>
+
+    <TableRow android:paddingVertical="6dp">
+        <TextView
+            style="@style/AboutLabel"
+            android:text="@string/about_updated" />
+
+        <TextView
+            android:id="@+id/about_updated"
+            style="@style/AboutValue" />
+    </TableRow>
+
+    <TableRow android:paddingVertical="6dp">
+        <TextView
+            style="@style/AboutLabel"
+            android:text="@string/about_repo" />
+
+        <TextView
+            style="@style/AboutValue"
+            android:autoLink="web"
+            android:text="@string/repo_url"
+            android:textColorLink="@color/accent" />
+    </TableRow>
+
+    <TableRow android:paddingVertical="6dp">
+        <TextView
+            style="@style/AboutLabel"
+            android:text="@string/about_author" />
+
+        <TextView
+            style="@style/AboutValue"
+            android:text="@string/author" />
+    </TableRow>
+</TableLayout>

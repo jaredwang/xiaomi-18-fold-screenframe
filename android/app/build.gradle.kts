@@ -1,3 +1,4 @@
+import java.time.LocalDate
 import java.util.Properties
 
 plugins {
@@ -23,6 +24,12 @@ val releaseSigning: Map<String, String>? = System.getenv("SIGNING_KEYSTORE_PATH"
     ?.let { file -> Properties().apply { file.inputStream().use(::load) } }
     ?.let { props -> props.stringPropertyNames().associateWith { props.getProperty(it) } }
 
+/** Date of the last commit (yyyy-MM-dd); today when building outside a git checkout. */
+val commitDate: String = runCatching {
+    providers.exec { commandLine("git", "log", "-1", "--format=%cs") }
+        .standardOutput.asText.get().trim()
+}.getOrNull()?.takeIf { it.isNotEmpty() } ?: LocalDate.now().toString()
+
 android {
     namespace = "com.veltrix.fold.frame"
     compileSdk = 35
@@ -33,7 +40,13 @@ android {
         targetSdk = 35
         // CI sets these from the release tag and the workflow run number.
         versionCode = System.getenv("VERSION_CODE")?.toInt() ?: 1
-        versionName = System.getenv("VERSION_NAME") ?: "1.0"
+        versionName = System.getenv("VERSION_NAME") ?: "1.0.1"
+        // Shown in About as the update date: the date of the commit being built.
+        buildConfigField("String", "BUILD_DATE", "\"$commitDate\"")
+    }
+
+    buildFeatures {
+        buildConfig = true
     }
 
     signingConfigs {

@@ -75,6 +75,12 @@
     <string name="tile_not_added">未添加</string>
     <string name="tile_unsupported">系统不支持一键添加，请在控制中心编辑里手动添加「带壳」</string>
 
+    <string name="about">关于</string>
+    <string name="about_version">版本号</string>
+    <string name="about_updated">更新日期</string>
+    <string name="about_repo">仓库地址</string>
+    <string name="about_author">作者</string>
+
     <string name="channel_prompt">截图后提醒加壳</string>
     <string name="channel_prompt_description">截屏后弹出「加壳」按钮</string>
     <string name="prompt_title">新截图</string>

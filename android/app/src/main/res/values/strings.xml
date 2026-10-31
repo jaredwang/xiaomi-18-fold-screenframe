@@ -86,6 +86,15 @@
     <string name="tile_not_added">Not added</string>
     <string name="tile_unsupported">Can\'t add it automatically; edit Quick Settings and add “Frame” by hand</string>
 
+    <!-- About dialog -->
+    <string name="about">About</string>
+    <string name="about_version">Version</string>
+    <string name="about_updated">Updated</string>
+    <string name="about_repo">Source code</string>
+    <string name="about_author">Author</string>
+    <string name="repo_url" translatable="false">https://github.com/jaredwang/xiaomi-18-fold-screenframe</string>
+    <string name="author" translatable="false">Veltrix</string>
+
     <!-- Screenshot prompt -->
     <string name="channel_prompt">Prompt after screenshots</string>
     <string name="channel_prompt_description">Shows a “Frame it” button after each screenshot</string>

@@ -586,7 +586,19 @@ class MainActivity : Activity() {
             .setTitle(R.string.entries_title)
             .setView(view)
             .setPositiveButton(R.string.done, null)
+            .setNeutralButton(R.string.about) { _, _ -> showAbout() }
             .setOnDismissListener { watchSwitch = null }
+            .show()
+    }
+
+    private fun showAbout() {
+        val view = layoutInflater.inflate(R.layout.dialog_about, null)
+        view.findViewById<TextView>(R.id.about_version).text = "${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})"
+        view.findViewById<TextView>(R.id.about_updated).text = BuildConfig.BUILD_DATE
+        AlertDialog.Builder(this)
+            .setTitle(R.string.about)
+            .setView(view)
+            .setPositiveButton(R.string.done, null)
             .show()
     }
 
