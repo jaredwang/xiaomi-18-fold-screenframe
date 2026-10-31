@@ -137,20 +137,20 @@ object FrameRenderer {
         c.drawPath(inset(p.rim + 19), stroke(0xFF262729.toInt(), 3 * s))
     }
 
-    /** Hinge barrel: a cylinder half-tucked under the body, slightly longer than it. */
+    /** Hinge barrel: a cylinder half-tucked under the body, slightly shorter than it. */
     private fun drawSpine(c: Canvas, l: Layout, spine: Spine, finish: Finish) {
         val s = l.scale
         val width = spine.width * s
         val tuck = 8 * s
-        val over = spine.overhang * s
+        val inset = spine.inset * s
         val r = (width - tuck) * 0.9f
         val vertical = spine.edge == Edge.LEFT || spine.edge == Edge.RIGHT
         val rect = if (vertical) {
             val x = if (spine.edge == Edge.LEFT) -(width - tuck) else l.bodyW - tuck
-            RectF(x, -over, x + width, l.bodyH + over)
+            RectF(x, inset, x + width, l.bodyH - inset)
         } else {
             val y = if (spine.edge == Edge.TOP) -(width - tuck) else l.bodyH - tuck
-            RectF(-over, y, l.bodyW + over, y + width)
+            RectF(inset, y, l.bodyW - inset, y + width)
         }
         val outerFirst = spine.edge == Edge.LEFT || spine.edge == Edge.TOP
         var stops = floatArrayOf(0f, 0.18f, 0.32f, 0.5f, 1f)

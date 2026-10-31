@@ -12,8 +12,8 @@ enum class Edge { TOP, RIGHT, BOTTOM, LEFT }
 /** A part along one edge, starting [start] units from the body's top/left corner. */
 data class EdgePart(val edge: Edge, val start: Float, val length: Float)
 
-/** Folded only: the hinge barrel standing proud of one edge. */
-data class Spine(val edge: Edge, val width: Float, val overhang: Float)
+/** Folded only: the hinge barrel standing proud of one edge, its ends [inset] short of the body's. */
+data class Spine(val edge: Edge, val width: Float, val inset: Float)
 
 data class Camera(val x: Float, val y: Float, val r: Float)
 
@@ -67,7 +67,7 @@ object Profiles {
         buttonDepth = 7f,
         hingeMarks = emptyList(),
         // Traced from the official black-model cover shots.
-        spine = Spine(Edge.LEFT, 26f, 9f),
+        spine = Spine(Edge.LEFT, 26f, 20f),
     )
 
     val ALL = listOf(INNER, OUTER)
