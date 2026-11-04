@@ -1,3 +1,15 @@
+## 1.0.4-beta3 - 2026-11-04
+
+### 中文
+
+- 针对 MiDuo 等桌面侧栏增加回收站确认兼容：确认框打开期间临时隐藏普通悬浮窗，完成或取消后自动恢复。
+- 覆盖确认失败、取消和 Activity 销毁等异常路径，避免应用窗口一直保留隐藏悬浮窗标志。
+
+### English
+
+- Improve trash-confirmation compatibility with MiDuo and similar desktop sidebars by temporarily hiding ordinary overlay windows while the system prompt is open.
+- Restore the overlay state after success, cancellation, launch failure, or activity destruction.
+
 ## 1.0.4-beta2 - 2026-11-04
 
 ### 中文
