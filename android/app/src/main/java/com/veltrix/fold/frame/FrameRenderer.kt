@@ -130,6 +130,10 @@ object FrameRenderer {
         c.drawPath(inset(0f), paint().apply { shader = metal })
         finish.outline?.let { c.drawPath(inset(0.5f), stroke(it, 1f * s)) }
         c.drawPath(inset(4.5f), stroke(Color.argb(66, 255, 255, 255), 2.5f * s))
+        if (!p.layeredBezel) {
+            c.drawPath(inset(p.rim), paint(0xFF070707.toInt()))
+            return
+        }
         c.drawPath(inset(p.rim), paint(0xFF141516.toInt()))
         c.drawPath(inset(p.rim + 5), stroke(0xFF4F5053.toInt(), 2 * s))
         c.drawPath(inset(p.rim + 13), paint(0xFF070707.toInt()))

@@ -40,7 +40,7 @@ android {
         targetSdk = 35
         // CI sets these from the release tag and the workflow run number.
         versionCode = System.getenv("VERSION_CODE")?.toInt() ?: 1
-        versionName = System.getenv("VERSION_NAME") ?: "1.0.2"
+        versionName = System.getenv("VERSION_NAME") ?: "1.0.3"
         // Shown in About as the update date: the date of the commit being built.
         buildConfigField("String", "BUILD_DATE", "\"$commitDate\"")
     }

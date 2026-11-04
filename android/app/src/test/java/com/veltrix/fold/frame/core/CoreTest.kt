@@ -34,6 +34,15 @@ class CoreTest {
     }
 
     @Test
+    fun coverBezelIsSlimmerThanInner() {
+        // Cover screen: 33-unit band per side (official renders), inner keeps 50.
+        val l = computeLayout(1168, 1712, Profiles.OUTER, 0, 0f, 1f)
+        assertEquals(1168f + 66f, l.bodyW)
+        assertEquals(1712f + 66f, l.bodyH)
+        assertEquals(1168f, l.screen.w)
+    }
+
+    @Test
     fun cameraCorners() {
         fun corner(rotation: Int): String {
             val portrait = rotation % 180 == 0
