@@ -50,7 +50,8 @@ object Profiles {
         screenW = 1672,
         screenH = 2364,
         radii = listOf(142f, 142f, 142f, 142f),
-        band = 50f,
+        // Official inner-screen renders measure roughly 34–37 units per side.
+        band = 35f,
         rim = 12f,
         layeredBezel = true,
         camera = Camera(95f, 96f, 36f),

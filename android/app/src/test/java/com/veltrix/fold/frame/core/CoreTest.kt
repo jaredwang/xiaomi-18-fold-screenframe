@@ -30,7 +30,7 @@ class CoreTest {
         val l = computeLayout(1672, 2364, Profiles.INNER, 0, 0.1f, 1f)
         assertEquals(1672f, l.screen.w)
         assertEquals(2364f, l.screen.h)
-        assertEquals(Math.round(1672 + 100 + 2 * l.pad), l.canvasW)
+        assertEquals(Math.round(1672 + 70 + 2 * l.pad), l.canvasW)
     }
 
     @Test
