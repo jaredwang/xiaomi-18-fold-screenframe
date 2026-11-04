@@ -6,6 +6,8 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <!-- Optional special access: lets trash requests skip the per-delete confirmation. -->
     <uses-permission android:name="android.permission.MANAGE_MEDIA" />
+    <!-- Hide ordinary floating windows while the system confirms a trash request. -->
+    <uses-permission android:name="android.permission.HIDE_OVERLAY_WINDOWS" />
 
     <application
         android:allowBackup="false"

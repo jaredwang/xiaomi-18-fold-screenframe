@@ -23,6 +23,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.provider.MediaStore
+import android.util.Log
 import android.view.View
 import android.view.WindowInsets
 import android.widget.Button
@@ -124,6 +125,7 @@ class MainActivity : Activity() {
     }
 
     override fun onDestroy() {
+        setTrashOverlayProtection(false)
         activeToast?.cancel()
         previewExec.shutdownNow()
         workExec.shutdown()
@@ -434,18 +436,37 @@ class MainActivity : Activity() {
                     toast(getString(R.string.originals_not_found))
                     return@post
                 }
-                trashing = found.map { it.first }
-                val request = MediaStore.createTrashRequest(contentResolver, found.map { it.second }, true)
-                // A toast above the system confirmation can make its security-sensitive
-                // Allow button reject touches. Remove our own notification before opening it.
-                activeToast?.cancel()
-                activeToast = null
-                startIntentSenderForResult(request.intentSender, REQ_TRASH, null, 0, 0, 0)
+                if (isFinishing || isDestroyed || trashing.isNotEmpty()) return@post
+                try {
+                    val request = MediaStore.createTrashRequest(contentResolver, found.map { it.second }, true)
+                    trashing = found.map { it.first }
+                    // Keep this protection on our visible window behind the translucent
+                    // system confirmation until its result arrives, including while paused.
+                    setTrashOverlayProtection(true)
+                    activeToast?.cancel()
+                    activeToast = null
+                    startIntentSenderForResult(request.intentSender, REQ_TRASH, null, 0, 0, 0)
+                } catch (e: Exception) {
+                    trashing = emptyList()
+                    setTrashOverlayProtection(false)
+                    toast(getString(R.string.error, e.message ?: e.toString()))
+                }
             }
         }
     }
 
+    private fun setTrashOverlayProtection(hide: Boolean) {
+        // This normal permission needs no settings prompt. Some OEMs may restrict it;
+        // in that case keep the system confirmation available as before.
+        try {
+            window.setHideOverlayWindows(hide)
+        } catch (e: SecurityException) {
+            Log.w("ScreenFrame", "Could not change trash overlay protection", e)
+        }
+    }
+
     private fun onTrashResult(ok: Boolean) {
+        setTrashOverlayProtection(false)
         val gone = trashing
         trashing = emptyList()
         if (!ok) {
