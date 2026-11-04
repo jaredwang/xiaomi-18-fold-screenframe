@@ -27,6 +27,11 @@ Put your Xiaomi 18 Fold screenshots inside a realistic device frame, from either
 
 Get the latest `ScreenFrame-x.y.z.apk` from [Releases](https://github.com/jaredwang/xiaomi-18-fold-screenframe/releases/latest) and open it on your phone to install. Requires Android 13+. It is built for the Xiaomi 18 Fold; it installs on other phones, but the frame drawn is the 18 Fold's.
 
+If **Allow** in the system trash confirmation does not respond, close any sidebar,
+floating button or other overlay and retry. Android can block sensitive confirmation
+buttons while another window is drawn above them. Alternatively, enable **Settings ›
+Remove without confirmation (media management)** and grant the system access.
+
 ### Build from source
 
 Requirements: JDK 17 and the Android SDK (platform 35).
@@ -85,6 +90,10 @@ An unofficial fan project, not affiliated with or endorsed by Xiaomi. "Xiaomi" a
 ### 下载
 
 到 [Releases](https://github.com/jaredwang/xiaomi-18-fold-screenframe/releases/latest) 下载最新的 `ScreenFrame-x.y.z.apk`，在手机上打开即可安装。需要 Android 13 及以上。应用是为小米 18 Fold 设计的，其他手机也能装，但画出来的是 18 Fold 的外壳。
+
+如果系统回收站确认框的「允许」点不动，请先关闭侧边栏、悬浮球等悬浮窗再试。
+Android 可能因悬浮窗遮挡而拦截敏感确认按钮的点击。也可以在应用「设置」中开启
+「删除时免确认（开启媒体管理权限）」，并在系统页面授权。
 
 ### 从源码编译
 

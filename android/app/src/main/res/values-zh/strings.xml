@@ -68,7 +68,7 @@
     <string name="trash_after_save">保存到相册后移到回收站</string>
     <string name="manage_media_on">已开启：删除时免确认</string>
     <string name="manage_media_off">删除时免确认（开启媒体管理权限）</string>
-    <string name="entries_help">· 移到回收站的截图 30 天内可恢复；分享用的临时文件分享完会自动清理\n· 快捷开关：打开最近一张截图\n· 分享菜单：相册里选图 → 分享 → 带壳截图\n· 调好效果后点「保存到相册」，保存在 相册 › 带壳截图\n· 如果截图提醒不出现：设置 › 应用 › 带壳截图，允许自启动、省电策略选「无限制」</string>
+    <string name="entries_help">· 移到回收站的截图 30 天内可恢复；分享用的临时文件分享完会自动清理\n· 回收站确认框的「允许」点不动？请先关闭侧边栏、悬浮球等悬浮窗后重试；也可开启上方「删除时免确认」\n· 快捷开关：打开最近一张截图\n· 分享菜单：相册里选图 → 分享 → 带壳截图\n· 调好效果后点「保存到相册」，保存在 相册 › 带壳截图\n· 如果截图提醒不出现：设置 › 应用 › 带壳截图，允许自启动、省电策略选「无限制」</string>
     <string name="need_photos_to_read">需要「照片和视频 › 始终允许所有」权限才能读取新截图</string>
     <string name="tile_added">已添加到快捷开关</string>
     <string name="tile_exists">快捷开关已存在</string>

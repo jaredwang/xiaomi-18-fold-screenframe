@@ -79,7 +79,7 @@
     <string name="trash_after_save">Move to trash after saving</string>
     <string name="manage_media_on">On: no confirmation when removing</string>
     <string name="manage_media_off">Remove without confirmation (media management)</string>
-    <string name="entries_help">· Trashed screenshots can be restored for 30 days; temporary share files are cleaned up automatically\n· Quick Settings tile: opens your latest screenshot\n· Share menu: pick an image in the gallery → Share → Screen Frame\n· When it looks right, tap Save; images go to Gallery › ScreenFrame\n· No screenshot prompt? Settings › Apps › Screen Frame: allow autostart and set battery saver to No restrictions</string>
+    <string name="entries_help">· Trashed screenshots can be restored for 30 days; temporary share files are cleaned up automatically\n· Cannot tap Allow in the trash confirmation? Close sidebars, floating buttons and other overlays, then retry; or enable Remove without confirmation above\n· Quick Settings tile: opens your latest screenshot\n· Share menu: pick an image in the gallery → Share → Screen Frame\n· When it looks right, tap Save; images go to Gallery › ScreenFrame\n· No screenshot prompt? Settings › Apps › Screen Frame: allow autostart and set battery saver to No restrictions</string>
     <string name="need_photos_to_read">Allow “Photos and videos › Always allow all” to read new screenshots</string>
     <string name="tile_added">Added to Quick Settings</string>
     <string name="tile_exists">The tile is already there</string>

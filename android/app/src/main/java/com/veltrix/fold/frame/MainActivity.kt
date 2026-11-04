@@ -87,6 +87,7 @@ class MainActivity : Activity() {
     private var busy = false
     private var optionTab = R.id.tab_finish
     private var watchSwitch: Switch? = null
+    private var activeToast: Toast? = null
 
     // Views of the inflated layout; rebound after every configuration change.
     private lateinit var preview: ImageView
@@ -123,6 +124,7 @@ class MainActivity : Activity() {
     }
 
     override fun onDestroy() {
+        activeToast?.cancel()
         previewExec.shutdownNow()
         workExec.shutdown()
         super.onDestroy()
@@ -434,6 +436,10 @@ class MainActivity : Activity() {
                 }
                 trashing = found.map { it.first }
                 val request = MediaStore.createTrashRequest(contentResolver, found.map { it.second }, true)
+                // A toast above the system confirmation can make its security-sensitive
+                // Allow button reject touches. Remove our own notification before opening it.
+                activeToast?.cancel()
+                activeToast = null
                 startIntentSenderForResult(request.intentSender, REQ_TRASH, null, 0, 0, 0)
             }
         }
@@ -545,7 +551,7 @@ class MainActivity : Activity() {
             item.flipped = item.detectedFlipped
         }
         optionsChanged()
-        Toast.makeText(this, R.string.reset_done, Toast.LENGTH_SHORT).show()
+        toast(getString(R.string.reset_done), Toast.LENGTH_SHORT)
     }
 
     // --- entry points (settings dialog) -----------------------------------------
@@ -642,7 +648,10 @@ class MainActivity : Activity() {
     private fun hasNotifications() =
         checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
 
-    private fun toast(text: String) = Toast.makeText(this, text, Toast.LENGTH_LONG).show()
+    private fun toast(text: String, duration: Int = Toast.LENGTH_LONG) {
+        activeToast?.cancel()
+        activeToast = Toast.makeText(this, text, duration).also { it.show() }
+    }
 
     // --- drawables ---------------------------------------------------------------
 
